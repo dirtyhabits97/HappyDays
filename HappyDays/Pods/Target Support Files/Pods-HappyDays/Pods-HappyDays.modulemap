@@ -1,0 +1,6 @@
+framework module Pods_HappyDays {
+  umbrella header "Pods-HappyDays-umbrella.h"
+
+  export *
+  module * { export * }
+}
