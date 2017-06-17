@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		418CA8A81EF5AB1D0075A96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8A71EF5AB1D0075A96E /* AppDelegate.swift */; };
+		418CA8AA1EF5AB1D0075A96E /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8A91EF5AB1D0075A96E /* WelcomeController.swift */; };
+		418CA8AF1EF5AB1D0075A96E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418CA8AE1EF5AB1D0075A96E /* Assets.xcassets */; };
+		418CA8B21EF5AB1D0075A96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418CA8B01EF5AB1D0075A96E /* LaunchScreen.storyboard */; };
+		418CA8BA1EF5B4790075A96E /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */; };
+		418CA8BD1EF5B66B0075A96E /* MemoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */; };
+		418CA8BF1EF5B6780075A96E /* MemoriesViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */; };
+		418CA8C21EF5C6460075A96E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8C11EF5C6460075A96E /* Helpers.swift */; };
+		4632D3E669D4B97CD0B4D1B7 /* Pods_HappyDays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C5CFBA16405E1C179B0118 /* Pods_HappyDays.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		418CA8A41EF5AB1C0075A96E /* HappyDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418CA8A71EF5AB1D0075A96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		418CA8A91EF5AB1D0075A96E /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		418CA8AE1EF5AB1D0075A96E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		418CA8B11EF5AB1D0075A96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		418CA8B31EF5AB1D0075A96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
+		418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewCell.swift; sourceTree = "<group>"; };
+		418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewHeader.swift; sourceTree = "<group>"; };
+		418CA8C11EF5C6460075A96E /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		5398D4D215284960E62285ED /* Pods-HappyDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDays.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays.debug.xcconfig"; sourceTree = "<group>"; };
+		F8C5CFBA16405E1C179B0118 /* Pods_HappyDays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB6A3F3EF4CE37114D491F8 /* Pods-HappyDays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDays.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		418CA8A11EF5AB1C0075A96E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4632D3E669D4B97CD0B4D1B7 /* Pods_HappyDays.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A6B90FBA918CD2EE8D0CF32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5CFBA16405E1C179B0118 /* Pods_HappyDays.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		418CA89B1EF5AB1C0075A96E = {
+			isa = PBXGroup;
+			children = (
+				418CA8A61EF5AB1C0075A96E /* HappyDays */,
+				418CA8A51EF5AB1C0075A96E /* Products */,
+				D1F1563177D1718145334F4C /* Pods */,
+				2A6B90FBA918CD2EE8D0CF32 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		418CA8A51EF5AB1C0075A96E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				418CA8A41EF5AB1C0075A96E /* HappyDays.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		418CA8A61EF5AB1C0075A96E /* HappyDays */ = {
+			isa = PBXGroup;
+			children = (
+				418CA8C01EF5C6150075A96E /* Helper */,
+				418CA8BB1EF5B6310075A96E /* Main */,
+				418CA8A71EF5AB1D0075A96E /* AppDelegate.swift */,
+				418CA8A91EF5AB1D0075A96E /* WelcomeController.swift */,
+				418CA8AE1EF5AB1D0075A96E /* Assets.xcassets */,
+				418CA8B01EF5AB1D0075A96E /* LaunchScreen.storyboard */,
+				418CA8B31EF5AB1D0075A96E /* Info.plist */,
+			);
+			path = HappyDays;
+			sourceTree = "<group>";
+		};
+		418CA8BB1EF5B6310075A96E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */,
+				418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */,
+				418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		418CA8C01EF5C6150075A96E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				418CA8C11EF5C6460075A96E /* Helpers.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D1F1563177D1718145334F4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5398D4D215284960E62285ED /* Pods-HappyDays.debug.xcconfig */,
+				FFB6A3F3EF4CE37114D491F8 /* Pods-HappyDays.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		418CA8A31EF5AB1C0075A96E /* HappyDays */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 418CA8B61EF5AB1D0075A96E /* Build configuration list for PBXNativeTarget "HappyDays" */;
+			buildPhases = (
+				5B4DE1B4EBDBD7576221030C /* [CP] Check Pods Manifest.lock */,
+				418CA8A01EF5AB1C0075A96E /* Sources */,
+				418CA8A11EF5AB1C0075A96E /* Frameworks */,
+				418CA8A21EF5AB1C0075A96E /* Resources */,
+				9894801FA9728A351246E5BF /* [CP] Embed Pods Frameworks */,
+				3A919B74B78DB6BCD60C0EDF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyDays;
+			productName = HappyDays;
+			productReference = 418CA8A41EF5AB1C0075A96E /* HappyDays.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		418CA89C1EF5AB1C0075A96E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = GERH;
+				TargetAttributes = {
+					418CA8A31EF5AB1C0075A96E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4D3BQQ6A8Z;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 418CA89F1EF5AB1C0075A96E /* Build configuration list for PBXProject "HappyDays" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 418CA89B1EF5AB1C0075A96E;
+			productRefGroup = 418CA8A51EF5AB1C0075A96E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				418CA8A31EF5AB1C0075A96E /* HappyDays */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		418CA8A21EF5AB1C0075A96E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418CA8B21EF5AB1D0075A96E /* LaunchScreen.storyboard in Resources */,
+				418CA8AF1EF5AB1D0075A96E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A919B74B78DB6BCD60C0EDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B4DE1B4EBDBD7576221030C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9894801FA9728A351246E5BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		418CA8A01EF5AB1C0075A96E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418CA8BF1EF5B6780075A96E /* MemoriesViewHeader.swift in Sources */,
+				418CA8C21EF5C6460075A96E /* Helpers.swift in Sources */,
+				418CA8BA1EF5B4790075A96E /* MemoriesViewController.swift in Sources */,
+				418CA8BD1EF5B66B0075A96E /* MemoriesViewCell.swift in Sources */,
+				418CA8AA1EF5AB1D0075A96E /* WelcomeController.swift in Sources */,
+				418CA8A81EF5AB1D0075A96E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		418CA8B01EF5AB1D0075A96E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				418CA8B11EF5AB1D0075A96E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		418CA8B41EF5AB1D0075A96E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		418CA8B51EF5AB1D0075A96E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		418CA8B71EF5AB1D0075A96E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5398D4D215284960E62285ED /* Pods-HappyDays.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				INFOPLIST_FILE = HappyDays/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.HappyDays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		418CA8B81EF5AB1D0075A96E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB6A3F3EF4CE37114D491F8 /* Pods-HappyDays.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				INFOPLIST_FILE = HappyDays/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.HappyDays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		418CA89F1EF5AB1C0075A96E /* Build configuration list for PBXProject "HappyDays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418CA8B41EF5AB1D0075A96E /* Debug */,
+				418CA8B51EF5AB1D0075A96E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		418CA8B61EF5AB1D0075A96E /* Build configuration list for PBXNativeTarget "HappyDays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418CA8B71EF5AB1D0075A96E /* Debug */,
+				418CA8B81EF5AB1D0075A96E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 418CA89C1EF5AB1C0075A96E /* Project object */;
+}
