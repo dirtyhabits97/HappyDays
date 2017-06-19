@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
+import Speech
 
 class MemoriesViewController: UICollectionViewController {
     
@@ -26,7 +29,12 @@ class MemoriesViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkPermissions()
     }
     
     // MARK: - Setup Methods
@@ -34,6 +42,16 @@ class MemoriesViewController: UICollectionViewController {
     fileprivate func registerCells() {
         collectionView?.register(MemoriesViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(MemoriesViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+    }
+    fileprivate func checkPermissions() {
+        let photosAuthorized = PHPhotoLibrary.authorizationStatus() == .authorized
+        let recordingAuthorized = AVAudioSession.sharedInstance().recordPermission() == .granted
+        let transcribeAuthorized = SFSpeechRecognizer.authorizationStatus() == .authorized
+        let isAuthorized = photosAuthorized && recordingAuthorized && transcribeAuthorized
+        if !isAuthorized {
+            let welcomeController = WelcomeController()
+            present(welcomeController, animated: true)
+        }
     }
     
     // MARK: - CollectionView Methods
