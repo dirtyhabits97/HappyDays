@@ -13,6 +13,9 @@ import Speech
 
 class MemoriesManager {
     
+    // MARK: - Properties
+    
+    
     // MARK: - GetURL Methods
     
     func getMemoryURL(for memory: URL, type: File) -> URL {
