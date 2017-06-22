@@ -17,11 +17,12 @@ import MobileCoreServices
 class MemoriesManager {
     
     // MARK: - Properties
+    typealias Memory = URL
     weak var delegate: MemoriesManagerDelegate?
-    var activeMemory: URL!
-    var recordingURL: URL!
-    var memories = [URL]()
-    var filteredMemories = [URL]()
+    var activeMemory: Memory!
+    var recordingURL: Memory!
+    var memories = [Memory]()
+    var filteredMemories = [Memory]()
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     
@@ -31,11 +32,11 @@ class MemoriesManager {
     
     // MARK: - GetURL Methods
     
-    func getMemoryURL(for memory: URL, type: File) -> URL {
+    func getMemoryURL(for memory: Memory, type: File) -> Memory {
         return memory.appendingPathExtension(type.rawValue)
     }
     
-    func getDocumentsDirectory() -> URL {
+    func getDocumentsDirectory() -> Memory {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
@@ -125,7 +126,7 @@ class MemoriesManager {
         }
     }
     
-    func transcribeAudio(memory: URL) {
+    func transcribeAudio(memory: Memory) {
         // 1. get paths to where the audio is, and where the transcription should be
         let audio = getMemoryURL(for: memory, type: .m4a)
         let transcription = getMemoryURL(for: memory, type: .txt)
@@ -155,7 +156,7 @@ class MemoriesManager {
         })
     }
     
-    func indexMemory(memory: URL, text: String) {
+    func indexMemory(memory: Memory, text: String) {
         // create a basic attribute set
         // attributes to be set to the searchable item
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
