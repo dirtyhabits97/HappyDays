@@ -56,7 +56,7 @@ extension MemoriesViewController: MemoryCellDelegate {
         if sender.state == .began {
             let cell = sender.view as! MemoryCell
             if let index = collectionView?.indexPath(for: cell) {
-                activeMemory = filteredMemories[index.item]
+                memoryManager.activeMemory = memoryManager.filteredMemories[index.item]
                 startRecording()
             }
         } else if sender.state == .ended {
@@ -71,7 +71,7 @@ extension MemoriesViewController: UISearchBarDelegate {
     func filterMemories(text: String) {
         var allItems = [CSSearchableItem]()
         if text.isEmpty {
-            filteredMemories = memories
+            memoryManager.filteredMemories = memoryManager.memories
             UIView.performWithoutAnimation {
                 collectionView?.reloadSections(IndexSet(integer: 1))
             }
@@ -90,7 +90,7 @@ extension MemoriesViewController: UISearchBarDelegate {
         searchQuery?.start()
     }
     func activateFilter(matches: [CSSearchableItem]) {
-        filteredMemories = matches.map { item in
+        memoryManager.filteredMemories = matches.map { item in
             return URL(fileURLWithPath: item.uniqueIdentifier)
         }
         UIView.performWithoutAnimation {

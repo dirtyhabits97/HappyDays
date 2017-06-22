@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol MemoryCellDelegate: class {
     func handleLongPress(sender: UILongPressGestureRecognizer)
+}
+
+protocol MemoriesManagerDelegate: class, AVAudioRecorderDelegate {
+    
 }

@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class MemoriesViewHeader: UICollectionViewCell {
-    
+    // MARK: - Interface Objects
     lazy var searchBar: UISearchBar = {
         let sb = UISearchBar()
         sb.placeholder = "What to search for?"
@@ -19,21 +19,20 @@ class MemoriesViewHeader: UICollectionViewCell {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
         return sb
     }()
-    
+    // MARK: - View Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .darkGray
         setupSearchBar()
     }
-    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    // MARK: - Setup Methods
     fileprivate func setupSearchBar() {
         addSubview(searchBar)
         searchBar.snp.makeConstraints { (make) in
             make.edges.equalTo(self)
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
