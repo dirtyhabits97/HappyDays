@@ -17,10 +17,9 @@ import MobileCoreServices
 class MemoriesManager {
     
     // MARK: - Properties
-    typealias Memory = URL
     weak var delegate: MemoriesManagerDelegate?
     var activeMemory: Memory!
-    var recordingURL: Memory!
+    var recordingURL: URL!
     var memories = [Memory]()
     var filteredMemories = [Memory]()
     var audioPlayer: AVAudioPlayer?
@@ -32,11 +31,11 @@ class MemoriesManager {
     
     // MARK: - GetURL Methods
     
-    func getMemoryURL(for memory: Memory, type: File) -> Memory {
-        return memory.appendingPathExtension(type.rawValue)
+    func getMemoryURL(for memory: Memory, type: File) -> URL {
+        return memory.directory.appendingPathExtension(type.rawValue)
     }
     
-    func getDocumentsDirectory() -> Memory {
+    func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
@@ -46,7 +45,8 @@ class MemoriesManager {
     
     func loadMemories() {
         memories.removeAll()
-        guard let files = try? FileManager.default.contentsOfDirectory(at: getDocumentsDirectory(), includingPropertiesForKeys: nil, options: []) else { return }
+        let directory = getDocumentsDirectory()
+        guard let files = try? FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil, options: []) else { return }
         for file in files {
             // name of the component, e.g. url/     swag.thumb
             let filename = file.lastPathComponent
@@ -54,8 +54,9 @@ class MemoriesManager {
                 // get the root name of the memory, withouth its path extension
                 let noExtension = filename.replacingOccurrences(of: File.thumb.fileExtension, with: "")
                 // create a full path from the memory
-                let memoryPath = getDocumentsDirectory().appendingPathComponent(noExtension)
-                memories.insert(memoryPath, at: 0)
+                let memoryPath = directory.appendingPathComponent(noExtension)
+                let memory = Memory(directory: memoryPath, name: noExtension)
+                memories.insert(memory, at: 0)
             }
         }
         filteredMemories = memories
@@ -63,12 +64,13 @@ class MemoriesManager {
     
     func saveNewMemory(image: UIImage) {
         // create a unique name for this memory based on time so it's ez to sort
-        let memoryName = "memory-\(Date().timeIntervalSince1970)"
-        let imageName = memoryName + File.jpg.fileExtension
-        let thumbnailName = memoryName + File.thumb.fileExtension
+        let name = "memory-\(Date().timeIntervalSince1970)"
+        let imageName = name + File.jpg.fileExtension
+        let thumbnailName = name + File.thumb.fileExtension
         do {
+            let directory = getDocumentsDirectory()
             // create url with the names created
-            let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+            let imagePath = directory.appendingPathComponent(imageName)
             // convert the UIImage into a JPEG data object
             if let imageJPEGData = UIImageJPEGRepresentation(image, 80) {
                 // write that data to the url created
@@ -76,7 +78,7 @@ class MemoriesManager {
             }
             
             if let thumbnail = image.resize(to: 200) {
-                let thumbnailPath = getDocumentsDirectory().appendingPathComponent(thumbnailName)
+                let thumbnailPath = directory.appendingPathComponent(thumbnailName)
                 if let thumbnailJPEGData = UIImageJPEGRepresentation(thumbnail, 80) {
                     try thumbnailJPEGData.write(to: thumbnailPath, options: [.atomic])
                 }
@@ -110,7 +112,7 @@ class MemoriesManager {
         if success {
             do {
                 // 3. Create the url file
-                let memoryAudioURL = activeMemory.appendingPathExtension(File.m4a.rawValue)
+                let memoryAudioURL = activeMemory.directory.appendingPathExtension(File.m4a.rawValue)
                 let fm = FileManager.default
                 // 4. Delete previous recording if it exists
                 if fm.fileExists(atPath: memoryAudioURL.path) {
@@ -164,7 +166,7 @@ class MemoriesManager {
         attributeSet.contentDescription = text
         attributeSet.thumbnailURL = getMemoryURL(for: memory, type: .thumb)
         // searchable item, using the memory path
-        let item = CSSearchableItem(uniqueIdentifier: memory.path, domainIdentifier: "com.gerh", attributeSet: attributeSet)
+        let item = CSSearchableItem(uniqueIdentifier: memory.name, domainIdentifier: "com.gerh", attributeSet: attributeSet)
         // never expire
         item.expirationDate = Date.distantFuture
         // ask Spotlight to index the item

@@ -87,11 +87,11 @@ extension MemoriesViewController: MemoriesManagerDelegate {
         memoryManager.stopRecording(success: success)
     }
     
-    fileprivate func transcribeAudio(memory: URL) {
+    fileprivate func transcribeAudio(memory: Memory) {
         memoryManager.transcribeAudio(memory: memory)
     }
     
-    fileprivate func indexMemory(memory: URL, text: String) {
+    fileprivate func indexMemory(memory: Memory , text: String) {
         memoryManager.indexMemory(memory: memory, text: text)
     }
 }

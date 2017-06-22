@@ -91,7 +91,7 @@ extension MemoriesViewController: UISearchBarDelegate {
     }
     func activateFilter(matches: [CSSearchableItem]) {
         memoryManager.filteredMemories = matches.map { item in
-            return URL(fileURLWithPath: item.uniqueIdentifier)
+            return Memory(directory: memoryManager.getDocumentsDirectory().appendingPathComponent(item.uniqueIdentifier), name: item.uniqueIdentifier)
         }
         UIView.performWithoutAnimation {
             collectionView?.reloadSections(IndexSet(integer: 1))
