@@ -15,7 +15,6 @@ class MemoriesViewHeader: UICollectionViewCell {
         let sb = UISearchBar()
         sb.placeholder = "What to search for?"
         sb.searchBarStyle = .minimal
-        sb.delegate = self
         UILabel.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor(white: 0.82, alpha: 1)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
         return sb
@@ -37,8 +36,4 @@ class MemoriesViewHeader: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension MemoriesViewHeader: UISearchBarDelegate {
-    
 }

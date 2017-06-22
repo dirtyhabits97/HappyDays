@@ -7,7 +7,6 @@
 //
 
 import UIKit
-var helpnNjJUuYy = ""
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let navController = UINavigationController(rootViewController: WelcomeController())
+        navController.navigationBar.barStyle = .black
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.tintColor = .white
         window?.rootViewController = navController
         return true
     }

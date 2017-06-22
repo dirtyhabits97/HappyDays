@@ -12,10 +12,14 @@
 		418CA8AF1EF5AB1D0075A96E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418CA8AE1EF5AB1D0075A96E /* Assets.xcassets */; };
 		418CA8B21EF5AB1D0075A96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418CA8B01EF5AB1D0075A96E /* LaunchScreen.storyboard */; };
 		418CA8BA1EF5B4790075A96E /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */; };
-		418CA8BD1EF5B66B0075A96E /* MemoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */; };
+		418CA8BD1EF5B66B0075A96E /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8BC1EF5B66B0075A96E /* MemoryCell.swift */; };
 		418CA8BF1EF5B6780075A96E /* MemoriesViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */; };
 		418CA8C21EF5C6460075A96E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CA8C11EF5C6460075A96E /* Helpers.swift */; };
 		4632D3E669D4B97CD0B4D1B7 /* Pods_HappyDays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C5CFBA16405E1C179B0118 /* Pods_HappyDays.framework */; };
+		7C241DF81EFB0CAB00FCB9E3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C241DF71EFB0CAB00FCB9E3 /* Protocols.swift */; };
+		7C241DFA1EFB3AA000FCB9E3 /* MemoriesViewController+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C241DF91EFB3AA000FCB9E3 /* MemoriesViewController+helpers.swift */; };
+		7C241DFD1EFB4EDA00FCB9E3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C241DFC1EFB4EDA00FCB9E3 /* File.swift */; };
+		7C241E001EFB4F0F00FCB9E3 /* MemoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C241DFF1EFB4F0F00FCB9E3 /* MemoriesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +30,14 @@
 		418CA8B11EF5AB1D0075A96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418CA8B31EF5AB1D0075A96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
-		418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewCell.swift; sourceTree = "<group>"; };
+		418CA8BC1EF5B66B0075A96E /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewHeader.swift; sourceTree = "<group>"; };
 		418CA8C11EF5C6460075A96E /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5398D4D215284960E62285ED /* Pods-HappyDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDays.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays.debug.xcconfig"; sourceTree = "<group>"; };
+		7C241DF71EFB0CAB00FCB9E3 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		7C241DF91EFB3AA000FCB9E3 /* MemoriesViewController+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MemoriesViewController+helpers.swift"; sourceTree = "<group>"; };
+		7C241DFC1EFB4EDA00FCB9E3 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7C241DFF1EFB4F0F00FCB9E3 /* MemoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesManager.swift; sourceTree = "<group>"; };
 		F8C5CFBA16405E1C179B0118 /* Pods_HappyDays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB6A3F3EF4CE37114D491F8 /* Pods-HappyDays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDays.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyDays/Pods-HappyDays.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,10 +83,10 @@
 		418CA8A61EF5AB1C0075A96E /* HappyDays */ = {
 			isa = PBXGroup;
 			children = (
-				418CA8C01EF5C6150075A96E /* Helper */,
+				7C241DFB1EFB3BC000FCB9E3 /* Util */,
 				418CA8BB1EF5B6310075A96E /* Main */,
-				418CA8A71EF5AB1D0075A96E /* AppDelegate.swift */,
 				418CA8A91EF5AB1D0075A96E /* WelcomeController.swift */,
+				418CA8A71EF5AB1D0075A96E /* AppDelegate.swift */,
 				418CA8AE1EF5AB1D0075A96E /* Assets.xcassets */,
 				418CA8B01EF5AB1D0075A96E /* LaunchScreen.storyboard */,
 				418CA8B31EF5AB1D0075A96E /* Info.plist */,
@@ -90,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				418CA8B91EF5B4790075A96E /* MemoriesViewController.swift */,
-				418CA8BC1EF5B66B0075A96E /* MemoriesViewCell.swift */,
+				418CA8BC1EF5B66B0075A96E /* MemoryCell.swift */,
 				418CA8BE1EF5B6780075A96E /* MemoriesViewHeader.swift */,
 			);
 			name = Main;
@@ -99,9 +107,29 @@
 		418CA8C01EF5C6150075A96E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7C241DF91EFB3AA000FCB9E3 /* MemoriesViewController+helpers.swift */,
 				418CA8C11EF5C6460075A96E /* Helpers.swift */,
+				7C241DFC1EFB4EDA00FCB9E3 /* File.swift */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		7C241DFB1EFB3BC000FCB9E3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7C241DFE1EFB4EFB00FCB9E3 /* Managers */,
+				418CA8C01EF5C6150075A96E /* Helper */,
+				7C241DF71EFB0CAB00FCB9E3 /* Protocols.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		7C241DFE1EFB4EFB00FCB9E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7C241DFF1EFB4F0F00FCB9E3 /* MemoriesManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		D1F1563177D1718145334F4C /* Pods */ = {
@@ -238,9 +266,13 @@
 			files = (
 				418CA8BF1EF5B6780075A96E /* MemoriesViewHeader.swift in Sources */,
 				418CA8C21EF5C6460075A96E /* Helpers.swift in Sources */,
+				7C241DF81EFB0CAB00FCB9E3 /* Protocols.swift in Sources */,
 				418CA8BA1EF5B4790075A96E /* MemoriesViewController.swift in Sources */,
-				418CA8BD1EF5B66B0075A96E /* MemoriesViewCell.swift in Sources */,
+				7C241E001EFB4F0F00FCB9E3 /* MemoriesManager.swift in Sources */,
+				418CA8BD1EF5B66B0075A96E /* MemoryCell.swift in Sources */,
+				7C241DFA1EFB3AA000FCB9E3 /* MemoriesViewController+helpers.swift in Sources */,
 				418CA8AA1EF5AB1D0075A96E /* WelcomeController.swift in Sources */,
+				7C241DFD1EFB4EDA00FCB9E3 /* File.swift in Sources */,
 				418CA8A81EF5AB1D0075A96E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

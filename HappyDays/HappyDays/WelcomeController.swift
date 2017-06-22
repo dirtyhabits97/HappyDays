@@ -54,51 +54,51 @@ class WelcomeController: UIViewController {
             make.width.equalTo(self.view).offset(-40)
         }
     }
-    fileprivate func setupPermissions() {
-        func requestPhotosPermission() {
-            PHPhotoLibrary.requestAuthorization { [unowned self](authStatus) in
-                DispatchQueue.main.async {
-                    if authStatus == .authorized {
-                        requestRecordPermission()
-                    } else {
-                        self.welcomeLabel.text = "Photos permission was declined; please enable it in settings then tap Continue again."
-                    }
+    
+    // MARK: - RequestPermission Methods
+    
+    fileprivate func requestPhotosPermission() {
+        PHPhotoLibrary.requestAuthorization { [unowned self](authStatus) in
+            DispatchQueue.main.async {
+                if authStatus == .authorized {
+                    self.requestRecordPermission()
+                } else {
+                    self.welcomeLabel.text = "Photos permission was declined; please enable it in settings then tap Continue again."
                 }
             }
         }
-        func requestRecordPermission() {
-            AVAudioSession.sharedInstance().requestRecordPermission { [unowned self] (allowed) in
-                DispatchQueue.main.async {
-                    if allowed {
-                        requestTranscribePermission()
-                    } else {
-                        self.welcomeLabel.text = "Recording permission was declined; please enable it in settings then tap Continue again."
-                    }
+    }
+    fileprivate func requestRecordPermission() {
+        AVAudioSession.sharedInstance().requestRecordPermission { [unowned self] (allowed) in
+            DispatchQueue.main.async {
+                if allowed {
+                    self.requestTranscribePermission()
+                } else {
+                    self.welcomeLabel.text = "Recording permission was declined; please enable it in settings then tap Continue again."
                 }
             }
         }
-        func requestTranscribePermission() {
-            SFSpeechRecognizer.requestAuthorization { [unowned self] (authStatus) in
-                    DispatchQueue.main.async {
-                        if authStatus == .authorized {
-                            authorizationComplete()
-                        } else {
-                            self.welcomeLabel.text = "Transcription permission was declined; please enable it in settings then tap Continue again."
-                        }
-                    }
+    }
+    fileprivate func requestTranscribePermission() {
+        SFSpeechRecognizer.requestAuthorization { [unowned self] (authStatus) in
+            DispatchQueue.main.async {
+                if authStatus == .authorized {
+                    self.authorizationComplete()
+                } else {
+                    self.welcomeLabel.text = "Transcription permission was declined; please enable it in settings then tap Continue again."
+                }
             }
         }
-        func authorizationComplete() {
-            let memoriesViewController = MemoriesViewController(collectionViewLayout: UICollectionViewFlowLayout())
-            navigationController?.pushViewController(memoriesViewController, animated: true)
-        }
-        requestPhotosPermission()
+    }
+    fileprivate func authorizationComplete() {
+        let memoriesViewController = MemoriesViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(memoriesViewController, animated: true)
     }
     
     // MARK: - Handle Methods
     
     func handleContinue() {        
-        setupPermissions()
+        requestPhotosPermission()
     }
 }
 
